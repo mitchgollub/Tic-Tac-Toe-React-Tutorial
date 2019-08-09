@@ -50,7 +50,7 @@ class Game extends React.Component {
             history: [{
                 squares: Array(9).fill(null),
             }],
-            xIsNext: true,
+            isXNext: true,
         };
     }
 
@@ -79,7 +79,7 @@ class Game extends React.Component {
         if (winner) {
             status = 'Winner: ' + winner;
         } else {
-            status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+            status = 'Next player: ' + (this.state.isXNext ? 'X' : 'O');
         }
         return (
             <div className="game">
